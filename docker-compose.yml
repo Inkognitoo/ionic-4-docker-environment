@@ -1,0 +1,20 @@
+version: '3'
+services:
+  ionic:
+    build:
+      context: ./ionic
+      args:
+        - PUID=${USER_PUID}
+        - PGID=${USER_PGID}
+        - PROJECT_NAME=${PROJECT_NAME}
+    container_name: ${CONTAINER_NAME}
+    volumes:
+      - ".:/home/ionic/${PROJECT_NAME}"
+      - "/dev/bus/usb:/dev/bus/usb"
+    ports:
+      - "8100:8100"
+      - "35729:35729"
+      - "53703:53703"
+    user: "${USER_PUID}:${USER_PUID}"
+    tty: true
+    privileged: true
