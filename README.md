@@ -1,4 +1,4 @@
-Bases on [beevelop](https://github.com/beevelop/docker-ionic) images. Big thanks him for it.
+Based on [beevelop](https://github.com/beevelop/docker-ionic) images. Big thanks him for it.
 
 Tested only for Linux. If you want it for MAC or WIN feel free to make pull request.
 
@@ -12,7 +12,7 @@ copy **.env.example** to **.env** and replace any environment value you want
 run `docker-compose up -d` for start docker container  
 run `docker-compose exec ionic bash` for going into container
 
-run `cd /tmp && ionic start $PROJECT_NAME blank --no-git && cp -rn /tmp/$PROJECT_NAME ~/ && cd ~/$PROJECT_NAME`
+run `cd /tmp && ionic start $PROJECT_NAME blank --no-git && cp -rn /tmp/$PROJECT_NAME ~/ && cd ~/$PROJECT_NAME` for creating new ionic project
 
 run `ionic serve` and open [localhost:8100](http://localhost:8100) for check is it work correctly
 

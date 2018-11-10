@@ -4,6 +4,7 @@ services:
     build:
       context: ./ionic
       args:
+        - IONIC_VERSION=${IONIC_VERSION}
         - PUID=${USER_PUID}
         - PGID=${USER_PGID}
         - PROJECT_NAME=${PROJECT_NAME}
